@@ -28,7 +28,6 @@ func printOdds(num: Int, even: Bool) -> [Int] {
 print(printOdds(num: 10, even: false))
 
 /* 2. print the power of a number until a limit  */
-
 func powerOfNum(number: Int, limit: Int) -> [Int] {
     var powers = [Int]()
     var start = number
@@ -41,3 +40,27 @@ func powerOfNum(number: Int, limit: Int) -> [Int] {
     return powers
 }
 print(powerOfNum(number: 2, limit: 64))
+
+/* 3. fibonacci numbers (the previous number adds itself)  */
+func fibonacciNumbers(limitOfTimes: Int) -> [Int] {
+    var fiboNumbers = [Int]()
+    var x = 0
+    var y = 1
+    fiboNumbers.append(x)
+    for _ in 0...limitOfTimes {
+        let z = x + y
+        x = y
+        y = z
+        fiboNumbers.append(z)
+        
+    }
+    return fiboNumbers
+}
+print(fibonacciNumbers(limitOfTimes: 10))
+
+
+
+/* 4. alternating order (last num then first num)  */
+
+/* 5. print the times table of a given number with the given times  */
+
