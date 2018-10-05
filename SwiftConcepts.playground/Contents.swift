@@ -81,5 +81,28 @@ print(alternatingOrderOfNumbers(numbers: 5))
 
 
 /* 5. print the times table of a given number with the given times  */
+func timesTableOf(times: Int, numberOfTimes: Int) -> [Int] {
+    var timesNumbers = [Int]()
+    var number = times
+    for _ in 1...numberOfTimes {
+        timesNumbers.append(number)
+        number += times
+    }
+    return timesNumbers
+}
+print(timesTableOf(times: 2, numberOfTimes: 5))
 
+
+/* 6. counting up to numbers in 10 steps */
+func countUpTenTimes(countUpTo: Int) -> [Int] {
+    var numbersTo = [Int]()
+    var dividedNumber = countUpTo / 10
+    var num = dividedNumber
+    for _ in 1...10 {
+        numbersTo.append(dividedNumber)
+        dividedNumber += num
+    }
+    return numbersTo
+}
+print(countUpTenTimes(countUpTo: 1000))
 
