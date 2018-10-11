@@ -97,7 +97,7 @@ print(timesTableOf(times: 2, numberOfTimes: 5))
 func countUpTenTimes(countUpTo: Int) -> [Int] {
     var numbersTo = [Int]()
     var dividedNumber = countUpTo / 10
-    var num = dividedNumber
+    let num = dividedNumber
     for _ in 1...10 {
         numbersTo.append(dividedNumber)
         dividedNumber += num
@@ -106,3 +106,25 @@ func countUpTenTimes(countUpTo: Int) -> [Int] {
 }
 print(countUpTenTimes(countUpTo: 1000))
 
+
+/* 7. alternate order of numbers. prints greater number then smaller number */
+var start = 1
+var end = 8
+var result = [Int]()
+
+while result.count < end {
+        if start == 1 {
+            result.append(start)
+        } else if start % 2 == 0 {
+                if start == end {
+                    result.append(start)
+                }
+                else {
+                    let next = start + 1
+                    result.append(next)
+                    result.append(start)
+                }
+            }
+    start += 1
+}
+print(result)
