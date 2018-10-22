@@ -128,3 +128,10 @@ while result.count < end {
     start += 1
 }
 print(result)
+
+/* 8. create a function that takes in an array of strings and returns back an array with all the removed duplicate strings */
+
+
+/* 9. replace a specific letter in a string with z */
+
+
