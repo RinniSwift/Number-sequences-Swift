@@ -129,9 +129,41 @@ while result.count < end {
 }
 print(result)
 
+
 /* 8. create a function that takes in an array of strings and returns back an array with all the removed duplicate strings */
+
+/*  - you are given an array of strings and supposed to return an array of strings with no duplicates
+    add the words that once checked arent duplicates to a new array
+    check a set and if the word isnt in the set yet, add it to the set and add it to a new array
+    this will add all the words in the original array that arent duplicates\
+    ** use a set because sets have a run time of 0 to 1
+ */
+
+func removeDuplicateStrings(array: [String]) -> [String] {
+    var encountered = Set<String>()
+    var result = [String]()
+    
+    /* go through the array, add strings to a set
+       search through the set, add it to a different array if the value does not equal to the value in the set
+    */
+
+    for value in array {
+        if encountered.contains(value) {
+            // do not add a duplicate value.
+            // add to a set because the run time is 0 to 1
+        } else {
+            encountered.insert(value)
+            result.append(value)
+        }
+    }
+    return result
+}
+
+let animals = ["cat", "dog", "monkey", "cat", "dog", "cricket", "cricket"]
+print(animals)
+let remove = removeDuplicateStrings(array: animals)
+print(remove)
 
 
 /* 9. replace a specific letter in a string with z */
-
 
