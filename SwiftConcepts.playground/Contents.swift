@@ -167,3 +167,34 @@ print(remove)
 
 /* 9. replace a specific letter in a string with z */
 
+
+/* 10. add strings to an array */
+
+func addStringToArray(sentence: String) -> [String] {
+    var arrayOfSentence = [String]()
+    var letterArray = [Character]()
+    
+    for letter in sentence {
+        letterArray.append(letter)
+    }
+    for character in letterArray {
+        
+    }
+    
+    print(letterArray)
+    return arrayOfSentence
+}
+addStringToArray(sentence: "Hi my name is Rinni")
+
+
+/* 10. add strings in array to a string */
+func arrayToString(array: [String]) -> String {
+    
+    var sentence = array.joined(separator: " ")
+    sentence.append(".")
+    
+    
+    return sentence
+}
+print(arrayToString(array: ["hi", "my", "name", "is", "Rinni"]))
+
