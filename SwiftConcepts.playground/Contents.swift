@@ -198,3 +198,33 @@ func arrayToString(array: [String]) -> String {
 }
 print(arrayToString(array: ["hi", "my", "name", "is", "Rinni"]))
 
+
+/* 11. check values in an array. if there is less than 2 mosquittos, "prepare to slap", if there are 5, "bring out the bug spray"
+    if there are more than 5, "prepare to spray and use bug cream"
+ */
+
+var animalsInRoom = ["mosquito", "ant", "butterfly", "bug", "mosquito", "mosquito"]
+
+func prepareForMosquitos(animals: [String]) {
+    let string = "prepare to slap"
+    let string2 = "bring out the bug spray"
+    let string3 = "prepare to spray and use bug cream"
+    
+    var mosquitos = 0
+    
+    for animals in animals {
+        if animals == "mosquito" {
+            mosquitos += 1
+        }
+    }
+    
+    if mosquitos <= 2 {
+        print(string)
+    } else if mosquitos <= 5 {
+        print(string2)
+    } else {
+        print(string3)
+    }
+}
+prepareForMosquitos(animals: animalsInRoom)
+
