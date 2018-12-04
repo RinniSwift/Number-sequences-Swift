@@ -171,13 +171,13 @@ print(remove)
 /* 10. add strings to an array */
 
 func addStringToArray(sentence: String) -> [String] {
-    var arrayOfSentence = [String]()
+    let arrayOfSentence = [String]()
     var letterArray = [Character]()
     
     for letter in sentence {
         letterArray.append(letter)
     }
-    for character in letterArray {
+    for _ in letterArray {
         
     }
     
@@ -227,4 +227,74 @@ func prepareForMosquitos(animals: [String]) {
     }
 }
 prepareForMosquitos(animals: animalsInRoom)
+
+/* 12. write a function that returns the factorial of N
+ */
+func factorial(n: Int) -> Int {
+    var factorialValue = 1
+    for number in 1...n {
+        factorialValue *= number
+    }
+
+    return factorialValue
+}
+print(factorial(n: 5))
+
+// reverse a given number
+func reverseInt(num: Int) -> String {
+    let stringNum = String(num)
+    var emptArray = [Character]()
+    let split = stringNum.split(separator: ",")
+    for i in split {
+        print(i)
+        for j in i {
+            print(j)
+            emptArray.append(j)
+            
+        }
+    }
+    print(emptArray)
+    emptArray.reverse()
+    
+    var answer = ""
+    for i in emptArray {
+        answer += String(i)
+    }
+    return answer
+}
+print(reverseInt(num: 564))
+
+
+// use OOP to find the curcumference and area of a circle
+class Circle {
+    var radius: Double
+    var circumference: Double
+    var area: Double
+    var diameter: Double
+    
+    init(radius: Double) {
+        self.radius = radius
+        self.circumference = (Double(2.0 * 3.14) * Double(radius))
+        self.area = Double(3.14 * (radius * radius))
+        self.diameter = radius * 2.0
+    }
+    
+    func halfArea() -> Double {
+        return area / 2
+    }
+}
+
+class smallCircle: Circle {
+    override init(radius: Double) {
+        super.init(radius: radius)
+    }
+    
+    
+}
+
+let circle1 = smallCircle(radius: 4)
+print(circle1.area)
+print(circle1.halfArea())
+
+
 
